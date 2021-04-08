@@ -1,0 +1,325 @@
+{% extends 'base1.html'%}
+{% load static%}
+{% block nav%} active{%endblock%}
+{% block body%}
+<!--/ Carousel Star /-->
+<div class="intro intro-carousel">
+    <div id="carousel" class="owl-carousel owl-theme">
+        <div class="carousel-item-a intro-item bg-image" style="background-image: url({% static 'img/slide-1.jpg'%})">
+            <div class="overlay overlay-a"></div>
+            <div class="intro-content display-table">
+                <div class="table-cell">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-8">
+                                <div class="intro-body">
+                                    <p class="intro-title-top">Bandra,Mumbai
+                                        <br> 78345</p>
+                                    <h1 class="intro-title mb-4">
+                                        <span class="color-b">09 </span> Sweet Home
+                                        <br> Bandra Street Market</h1>
+                                    <p class="intro-subtitle intro-price">
+                                        <a href="{%url 'property_grid'%}"><span class="price-a">rent | Rs 30,000</span></a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="carousel-item-a intro-item bg-image" style="background-image: url({% static 'img/slide-2.jpg'%})">
+            <div class="overlay overlay-a"></div>
+            <div class="intro-content display-table">
+                <div class="table-cell">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-8">
+                                <div class="intro-body">
+                                    <p class="intro-title-top">Karol Bagh, Delhi
+                                        <br> 85345</p>
+                                    <h1 class="intro-title mb-4">
+                                        <span class="color-b">104 </span> Shanti Vihar
+                                        <br> Karol Bagh Market </h1>
+                                    <p class="intro-subtitle intro-price">
+                                        <a href="{%url 'property_grid'%}"><span
+                                                class="price-a">Sell | Rs 1,50,00,000</span></a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="carousel-item-a intro-item bg-image" style="background-image: url({% static 'img/slide-3.jpg'%})">
+            <div class="overlay overlay-a"></div>
+            <div class="intro-content display-table">
+                <div class="table-cell">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-8">
+                                <div class="intro-body">
+                                    <p class="intro-title-top">Johari Bazzar, Jaipur
+                                        <br> 90045</p>
+                                    <h1 class="intro-title mb-4">
+                                        <span class="color-b">04 </span> Om Palace
+                                        <br> Badi Chaupat Street</h1>
+                                    <p class="intro-subtitle intro-price">
+                                        <a href="{%url 'property_grid'%}"><span class="price-a">rent | Rs 20,000</span></a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--/ Carousel end /-->
+
+<!--/ Services Star /-->
+<section class="section-services section-t8">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="title-wrap d-flex justify-content-between">
+                    <div class="title-box">
+                        <h2 class="title-a">Our Services</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card-box-c foo">
+                    <div class="card-header-c d-flex">
+                        <div class="card-box-ico">
+                            <span class="fa fa-gamepad"></span>
+                        </div>
+                        <div class="card-title-c align-self-center">
+                            <h2 class="title-c">Lifestyle</h2>
+                        </div>
+                    </div>
+                    <div class="card-body-c">
+                        <p class="content-c">
+                            Lifestyle real estate is defined as homes that are proactively designed and built to support
+                            the holistic health of their residents.
+                        </p>
+                    </div>
+                    <div class="card-footer-c">
+                        <a href="{%url 'services'%}" class="link-c link-icon">Read more
+                            <span class="ion-ios-arrow-forward"></span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card-box-c foo">
+                    <div class="card-header-c d-flex">
+                        <div class="card-box-ico">
+                            <span class="fa fa-usd"></span>
+                        </div>
+                        <div class="card-title-c align-self-center">
+                            <h2 class="title-c">Negotiations</h2>
+                        </div>
+                    </div>
+                    <div class="card-body-c">
+                        <p class="content-c">
+                            Create a solution for all partners involved.We provide the highest possible price for your
+                            property.
+                        </p>
+                    </div>
+                    <div class="card-footer-c">
+                        <a href="{%url 'services'%}" class="link-c link-icon">Read more
+                            <span class="ion-ios-arrow-forward"></span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card-box-c foo">
+                    <div class="card-header-c d-flex">
+                        <div class="card-box-ico">
+                            <span class="fa fa-home"></span>
+                        </div>
+                        <div class="card-title-c align-self-center">
+                            <h2 class="title-c">Buy & Sell</h2>
+                        </div>
+                    </div>
+                    <div class="card-body-c">
+                        <p class="content-c">
+                            Whether you're looking to buy, sell, our residential specialists are with you every step of
+                            the way,
+                            ensuring a smooth process and helpful communication at every stage.
+                        </p>
+                    </div>
+                    <div class="card-footer-c">
+                        <a href="{%url 'services'%}" class="link-c link-icon">Read more
+                            <span class="ion-ios-arrow-forward"></span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--/ Services End /-->
+
+<!--/ Property Star /-->
+<section class="section-property section-t8">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="title-wrap d-flex justify-content-between">
+                    <div class="title-box">
+                        <h2 class="title-a">Latest Properties</h2>
+                    </div>
+                    <div class="title-link">
+                        <a href="{% url 'property_grid' %}">All Property
+                            <span class="ion-ios-arrow-forward"></span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="property-carousel" class="owl-carousel owl-theme">
+            {% for post in posts %}
+
+            <div class="carousel-item-b">
+                <div class="card-box-a card-shadow">
+                    <div class="img-box-a">
+                        <img src="{{post.image.url}}" style="width:450px; height:400px" alt="" class="img-a img-fluid">
+                    </div>
+                    <div class="card-overlay">
+                        <div class="card-overlay-a-content">
+                            <div class="card-header-a">
+                                <h2 class="card-title-a">
+                                    <a href="/property_single/{{post.id}}">{{post.name}}
+                                        <br/> {{post.address}}</a>
+                                </h2>
+                            </div>
+                            <div class="card-body-a">
+                                <div class="price-box d-flex">
+                                    <span class="price-a">{{post.type}} | Rs {{post.price}}</span>
+                                </div>
+                                <a href="/property_single/{{post.id}}" class="link-a">Click here to view
+                                    <span class="ion-ios-arrow-forward"></span>
+                                </a>
+                            </div>
+                            <div class="card-footer-a">
+                                <ul class="card-info d-flex justify-content-around">
+                                    <li>
+                                        <h4 class="card-info-title">Area</h4>
+                                        <span>{{post.area}}m
+                        <sup>2</sup>
+                      </span>
+                                    </li>
+                                    <li>
+                                        <h4 class="card-info-title">Beds</h4>
+                                        <span>{{post.bedroom}}</span>
+                                    </li>
+                                    <li>
+                                        <h4 class="card-info-title">Baths</h4>
+                                        <span>{{post.bathroom}}</span>
+                                    </li>
+
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+
+        </div>
+    </div>
+</section>
+<!--/ Property End /-->
+<!--/ Agents Star /-->
+<section class="section-agents section-t8">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="title-wrap d-flex justify-content-between">
+                    <div class="title-box">
+                        <h2 class="title-a">Best Agents</h2>
+                    </div>
+                    <div class="title-link">
+                        <a href="{% url 'agent_grid'%}">All Agents
+                            <span class="ion-ios-arrow-forward"></span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            {% for a in agents %}
+            <div class="col-md-4">
+                <div class="card-box-d">
+                    <div class="card-img-d">
+                        <img src="{{a.a_image.url}}" style="width:450px; height:400px" alt="" class="img-d img-fluid">
+                    </div>
+                    <div class="card-overlay card-overlay-hover">
+                        <div class="card-header-d">
+                            <div class="card-title-d align-self-center">
+                                <h3 class="title-d">
+                                    <a href="#" class="link-two">{{a.user.first_name}}
+                                        <br> {{a.user.last_name}}</a>
+                                </h3>
+                            </div>
+                        </div>
+                        <div class="card-body-d">
+                            <p class="content-d color-text-a"> {{a.a_dis}}
+                            </p>
+                            <div class="info-agents color-a">
+                                <p>
+                                    <strong>Phone: </strong> {{a.a_mobile}}</p>
+                                <p>
+                                    <strong>Email: </strong> {{a.user.email}}</p>
+                            </div>
+                        </div>
+<!--                        <div class="card-footer-d">-->
+<!--                            <div class="socials-footer d-flex justify-content-center">-->
+<!--                                <ul class="list-inline">-->
+<!--                                    <li class="list-inline-item">-->
+<!--                                        <a href="#" class="link-one">-->
+<!--                                            <i class="fa fa-facebook" aria-hidden="true"></i>-->
+<!--                                        </a>-->
+<!--                                    </li>-->
+<!--                                    <li class="list-inline-item">-->
+<!--                                        <a href="#" class="link-one">-->
+<!--                                            <i class="fa fa-twitter" aria-hidden="true"></i>-->
+<!--                                        </a>-->
+<!--                                    </li>-->
+<!--                                    <li class="list-inline-item">-->
+<!--                                        <a href="#" class="link-one">-->
+<!--                                            <i class="fa fa-instagram" aria-hidden="true"></i>-->
+<!--                                        </a>-->
+<!--                                    </li>-->
+<!--                                    <li class="list-inline-item">-->
+<!--                                        <a href="#" class="link-one">-->
+<!--                                            <i class="fa fa-pinterest-p" aria-hidden="true"></i>-->
+<!--                                        </a>-->
+<!--                                    </li>-->
+<!--                                    <li class="list-inline-item">-->
+<!--                                        <a href="#" class="link-one">-->
+<!--                                            <i class="fa fa-dribbble" aria-hidden="true"></i>-->
+<!--                                        </a>-->
+<!--                                    </li>-->
+<!--                                </ul>-->
+<!--                            </div>-->
+<!--                        </div>-->
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+<!--/ Agents End /-->
+
+
+{% endblock%}
+

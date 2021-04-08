@@ -1,0 +1,91 @@
+{% extends 'base1.html'%}
+{% load static%}
+{% block nav4%} active{%endblock%}
+
+{% block body%}
+
+<!--/ Intro Single star /-->
+<section class="intro-single">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 col-lg-8">
+        <div class="title-single-box">
+          <h1 class="title-single">Our Services</h1>
+        </div>
+      </div>
+      <div class="col-md-12 col-lg-4">
+        <nav aria-label="breadcrumb" class="breadcrumb-box d-flex justify-content-lg-end">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item">
+              <a href="#">Home</a>
+            </li>
+            <li class="breadcrumb-item active" aria-current="page">
+              Our Services
+            </li>
+          </ol>
+        </nav>
+      </div>
+    </div>
+  </div>
+</section>
+<!--/ Intro Single End /-->
+
+<!--/ News Single Star /-->
+<section class="news-single nav-arrow-b">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12">
+        <div class="news-img-box">
+          <img src="{% static 'img/slide-3.jpg'%}" alt="" class="img-fluid">
+        </div>
+      </div>
+      <div class="col-md-10 offset-md-1 col-lg-8 offset-lg-2">
+        <div class="post-information">
+          <ul class="list-inline text-center color-a">
+            <li class="list-inline-item mr-2">
+              <strong>Services: </strong>
+              <span class="color-text-a">Loan..Sell..Rent..</span>
+            </li>
+            <li class="list-inline-item mr-2">
+              <strong>Category: </strong>
+              <span class="color-text-a">All</span>
+            </li>
+
+          </ul>
+        </div>
+        <div class="post-content color-text-a">
+          <p class="post-intro">
+            Lifestyle <strong> Real Estate </strong> is defined as homes that are proactively designed and built to support
+            the holistic health of their residents.
+          </p>
+          <p>
+
+            Whether you're looking to buy, sell, our residential specialists are with you every step of
+            the way,
+            ensuring a smooth process and helpful communication at every stage.
+          </p>
+          <p>
+            Create a solution for all partners involved.
+          </p>
+          <blockquote class="blockquote">
+            <p class="mb-4">Agents Manages the buying process,Demonstrate negotiation skills, making offers of purchase on
+                real estate.</p>
+            <footer class="blockquote-footer">
+              <strong> Karan Sharma</strong>
+              <cite title="Source Title">Agent</cite>
+            </footer>
+          </blockquote>
+          <p>
+           We provide the highest possible price for your
+            property.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </div>
+  </div>
+</section>
+<!--/ News Single End /-->
+{% endblock%}
+

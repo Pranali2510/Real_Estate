@@ -1,0 +1,163 @@
+{% extends 'customer_dashboard.html'%}
+{% load static%}
+{%block nav1%} active {% endblock %}
+{%block main%}
+<section id="main-content">
+    <section class="wrapper">
+        <div class="row">
+            <div class="form-panel">
+                <!-- MAIN CONTENT -->
+                <h4 class="text-center alert alert-info">Showing Property Details</h4>
+                <div class="col-sm-12">
+                    <div class="grid-option">
+                        <form method="post">
+                            {% csrf_token%}
+
+                            <select name= "status" class="custom-select">
+                                <option selected>All</option>
+
+                                {% for status in status1 %}
+                                <option value="{{status}}"
+                                        {% if selected_status == status %}
+                                        selected = "selected"
+                                        {% endif %}>{{status}}</option>
+                                {% endfor %}
+                            </select>
+                            <select name= "type" class="custom-select">
+                                <option selected>All</option>
+
+                                {% for type in status2 %}
+                                <option value="{{type}}"
+                                        {% if selected_type == type %}
+                                        selected = "selected"
+
+                                        {% endif %}>{{type}}</option>
+                                {% endfor %}
+                            </select>
+                            <input type="submit" value="Select">
+                        </form>
+                    </div>
+                </div>
+                {% if selected_status or selected_type %}
+                {% for post in posts %}
+
+                <section class="property-grid grid">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="card-box-a card-shadow">
+                                    <div class="img-box-a">
+                                        <img src="{{post.image.url}}"  style="width:200px; height:300px" alt="" class="img-a img-fluid">
+                                    </div>
+                                    <div class="card-overlay">
+                                        <div class="card-overlay-a-content">
+                                            <div class="card-header-a">
+                                                <h2 class="card-title-a">
+
+                                                    <a href="#">{{post.name}}
+                                                        <br /> {{post.address}}</a>
+                                                </h2>
+                                            </div>
+                                            <div class="card-body-a">
+                                                <div class="price-box d-flex">
+                                                    <span class="price-a">{{post.type}} | Rs {{post.price}}</span>
+                                                </div>
+                                                <a href="/property_single/{{post.id}}" class="link-a">Click here to view
+
+                                                    <span class="ion-ios-arrow-forward"></span>
+                                                </a>
+                                            </div>
+                                            <div class="card-footer-a">
+                                                <ul class="card-info d-flex justify-content-around">
+                                                    <li>
+                                                        <h4 class="card-info-title">Area</h4>
+                                                        <span>{{post.area}}m
+                        <sup>2</sup>
+                      </span>
+                                                    </li>
+                                                    <li>
+                                                        <h4 class="card-info-title">Beds</h4>
+                                                        <span>{{post.bedroom}}</span>
+                                                    </li>
+                                                    <li>
+                                                        <h4 class="card-info-title">Baths</h4>
+                                                        <span>{{post.bathroom}}</span>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            {% endfor %}
+                            {% endif %}
+                            {% if selected_status == None or selected_type == None %}
+                            {% for post in posts %}
+
+                            <div class="col-md-4">
+                                <div class="card-box-a card-shadow">
+                                    <div class="img-box-a">
+                                        <img src="{{post.image.url}}"  style="width:300px; height:300px" alt="" class="img-a img-fluid">
+                                    </div>
+                                    <div class="card-overlay">
+                                        <div class="card-overlay-a-content">
+                                            <div class="card-header-a">
+                                                <h2 class="card-title-a">
+
+                                                    <a href="#">{{post.name}}
+                                                        <br /> {{post.address}}</a>
+                                                </h2>
+                                            </div>
+                                            <div class="card-body-a">
+                                                <div class="price-box d-flex">
+                                                    <span class="price-a">{{post.type}} | Rs {{post.price}}</span>
+                                                </div>
+                                                <a href="/property_single/{{post.id}}" class="link-a">Click here to view
+
+                                                    <span class="ion-ios-arrow-forward"></span>
+                                                </a>
+                                            </div>
+                                            <div class="card-footer-a">
+                                                <ul class="card-info d-flex justify-content-around">
+                                                    <li>
+                                                        <h4 class="card-info-title">Area</h4>
+                                                        <span>{{post.area}}m
+                        <sup>2</sup>
+                      </span>
+                                                    </li>
+                                                    <li>
+                                                        <h4 class="card-info-title">Beds</h4>
+                                                        <span>{{post.bedroom}}</span>
+                                                    </li>
+                                                    <li>
+                                                        <h4 class="card-info-title">Baths</h4>
+                                                        <span>{{post.bathroom}}</span>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            {% endfor %}
+                            {% endif %}
+
+
+                        </div>
+                    </div>
+                    <p>{% include "pagination.html" with page=posts %}</p>
+
+                </section>
+
+                <!-- END MAIN CONTENT -->
+            </div>
+
+        </div>
+
+    </section>
+</section>
+{% endblock %}
+
+

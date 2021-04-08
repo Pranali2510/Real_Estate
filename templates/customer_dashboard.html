@@ -1,0 +1,70 @@
+{% extends 'base2.html'%}
+{% load static%}
+
+{% block title %} User Dashboard {%endblock%}
+{% block body%}
+<header class="header black-bg">
+      <div class="sidebar-toggle-box">
+        <div class="fa fa-bars tooltips" data-placement="right" data-original-title="Toggle Navigation"></div>
+      </div>
+      <!--logo start-->
+      <a href="#" class="logo"><b>DASH<span>IO</span></b></a>
+      <!--logo end-->
+      <div class="nav notify-row" id="top_menu">
+
+        </ul>
+        <!--  notification end -->
+      </div>
+      <div class="top-menu">
+        <ul class="nav pull-right top-menu">
+          <li><a class="logout" href="{% url 'logout_view'%}">Logout</a></li>
+        </ul>
+      </div>
+    </header>
+<aside>
+    <div id="sidebar" class="nav-collapse ">
+        <!-- sidebar menu start-->
+        <ul class="sidebar-menu" id="nav-accordion">
+            <p class="centered"><a href="profile.html"><img src="{% static 'dashboard/img/ui-sam.jpg'%}" class="img-circle" width="80"></a></p>
+            <h5 class="centered"> {{user.username}}</h5>
+            <li class="mt">
+                <a class= "{%block nav%} {%endblock%}" href="{% url 'view_user'%}">
+                    <i class="fa fa-dashboard"></i>
+                    <span>Profile</span>
+                </a>
+            </li>
+            <li class="sub-menu">
+                <a class= "{%block nav1%} {%endblock%}" href="javascript:;">
+                    <i class="fa fa-desktop"></i>
+                    <span>Property</span>
+                </a>
+                <ul class="sub">
+                    <li><a href="{% url 'u_properties'%}">View Property</a></li>
+                </ul>
+            </li>
+            <li class="sub-menu">
+                <a class= "{%block nav2%} {%endblock%}" href="javascript:;">
+                    <i class="fa fa-cogs"></i>
+                    <span>Visiting Schedule</span>
+                </a>
+            </li>
+            <li class="sub-menu">
+                <a class= "{%block nav3%} {%endblock%}" href="javascript:;">
+                    <i class="fa fa-book"></i>
+                    <span>Purchasing Process</span>
+                </a>
+            </li>
+            <li class="sub-menu">
+                <a class= "{%block nav4%} {%endblock%}"  href="{% url 'ufeedback'%}">
+                    <i class="fa fa-tasks"></i>
+                    <span>Feedback</span>
+                </a>
+            </li>
+        </ul>
+        <!-- sidebar menu end-->
+    </div>
+</aside>
+{%block main%}
+{%endblock%}
+
+{%endblock%}

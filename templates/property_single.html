@@ -1,0 +1,240 @@
+{% extends 'base1.html'%}
+{% load static%}
+{% block nav4%} active{%endblock%}
+
+{% block body%}
+
+<!--/ Intro Single star /-->
+{% for p1 in post1 %}
+<section class="intro-single">
+    <div class="container">
+
+        <div class="row">
+
+            <div class="col-md-12 col-lg-8">
+                <div class="title-single-box">
+
+                    <h1 class="title-single">{{p1.name}}</h1>
+                    <span class="color-text-a">{{p1.address}}</span>
+
+                </div>
+            </div>
+            <div class="col-md-12 col-lg-4">
+                <nav aria-label="breadcrumb" class="breadcrumb-box d-flex justify-content-lg-end">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item">
+                            <a href="{% url 'index'%}">Home</a>
+                        </li>
+                        <li class="breadcrumb-item">
+                            <a href="{% url 'property_grid'%}">Properties</a>
+                        </li>
+                        <li class="breadcrumb-item active" aria-current="page">{{p1.name}}
+                        </li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
+    </div>
+</section>
+<!--/ Intro Single End /-->
+
+<!--/ Property Single Star /-->
+
+<section class="property-single nav-arrow-b">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <div id="property-single-carousel" class="owl-carousel owl-arrow gallery-property">
+                    {% for p in photos %}
+                    <img class="d-block w-100" src="{{p.images.url}}" style="width:450px; height:400px"
+                         alt="First slide">
+                    {% endfor %}
+
+
+                </div>
+
+
+            </div>
+            <div class="row justify-content-between">
+                <div class="col-md-5 col-lg-4">
+                    <div class="property-price d-flex justify-content-center foo">
+                        <div class="card-header-c d-flex">
+                            <div class="card-box-ico">
+                                <span class="ion-money">Rs</span>
+                            </div>
+                            <div class="card-title-c align-self-center">
+                                <h5 class="title-c">{{p1.price}}</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="property-summary">
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <div class="title-box-d section-t4">
+                                    <h3 class="title-d">Quick Summary</h3>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="summary-list">
+                            <ul class="list">
+                                <li class="d-flex justify-content-between">
+                                    <strong>Property ID:</strong>
+                                    <span>{{p1.id}}</span>
+                                </li>
+                                <li class="d-flex justify-content-between">
+                                    <strong>Property Type:</strong>
+                                    <span>{{p1.type}}</span>
+                                </li>
+                                <li class="d-flex justify-content-between">
+                                    <strong>Status:</strong>
+                                    <span>{{p1.status}}</span>
+                                </li>
+                                <li class="d-flex justify-content-between">
+                                    <strong>Area:</strong>
+                                    <span>{{p1.area}}m
+                        <sup>2</sup>
+                      </span>
+                                </li>
+                                <li class="d-flex justify-content-between">
+                                    <strong>Beds:</strong>
+                                    <span>{{p1.bedroom}}</span>
+                                </li>
+                                <li class="d-flex justify-content-between">
+                                    <strong>Baths:</strong>
+                                    <span>{{p1.bathroom}}</span>
+                                </li>
+                                <li class="d-flex justify-content-between">
+                                    <strong>Location:</strong>
+                                    <span>{{p1.address}}</span>
+                                </li>
+
+                            </ul>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-7 col-lg-7 section-md-t3">
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <div class="title-box-d">
+                                <h3 class="title-d">Property Description</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="property-description">
+                        <p class="description color-text-a">
+                        <p class="description color-text-a no-margin">
+                            {{p1.description}}</div>
+                    <div class="row section-t3">
+                        <div class="col-sm-12">
+                            <div class="title-box-d">
+                                <h3 class="title-d">Amenities</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="amenities-list color-text-a">
+                        <ul>
+                            {% if p1.balcony == True %}
+                            <li>Balcony&nbsp;</li>&nbsp;
+                            {% endif %}
+
+                            {% if p1.lift == True %}
+                            <li>Lift&nbsp;</li>&nbsp;
+                            {% endif %}
+
+                            {% if p1.parking == True %}
+                            <li>Parking</li>&nbsp;
+                            {% endif %}
+
+                            {% if p1.swimming == True %}
+                            <li>Swimming Pool &nbsp;</li>&nbsp;
+                            {% endif %}
+
+                            {% if p1.masterroom == True %}
+                            <li>Master Room &nbsp;</li>&nbsp;
+                            {% endif %}
+
+                            {% if p1.storeroom == True %}
+                            <li>Store Room &nbsp;</li>&nbsp;
+                            {% endif %}
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+              {% endfor %}
+
+
+      {% for p1 in post1 %}
+
+        <div class="col-md-12">
+            <div class="row section-t3">
+                <div class="col-sm-12">
+                    <div class="title-box-d">
+                        <h3 class="title-d">Contact Agent</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6 col-lg-4">
+                    <img src="{{img}}" alt="hello" class="img-fluid">
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="property-agent">
+                        <h4 class="title-agent">{{p1.agent.first_name}}{{p1.agent.last_name}}</h4>
+                        <p class="color-text-a">
+                            Manages the buying process,Demonstrate negotiation skills, making offers of purchase on real
+                            estate.</p>
+                        <ul class="list-unstyled">
+
+
+                            <li class="d-flex justify-content-between">
+                                <strong>Email:</strong>
+                                <span class="color-text-a">{{p1.agent.email}}</span>
+                            </li>
+
+                        </ul>
+
+                    </div>
+                </div>
+                        {% endfor %}
+
+                <div class="col-md-12 col-lg-4">
+                    <div class="property-contact">
+                        <form class="form-a" method="post">
+                                                {% csrf_token%}
+
+                            <div class="row">
+                                <div class="col-md-12 mb-1">
+                                    <div class="form-group">
+                                                <input class=" form-control" id="subject" name="name" placeholder="Name" type="text" />
+
+                                    </div>
+                                </div>
+                                <div class="col-md-12 mb-1">
+                                    <div class="form-group">
+                                                <input class=" form-control" id="u_email" name="u_email" placeholder="E-mail"  type="email" />
+                                    </div>
+                                </div>
+                                <div class="col-md-12 mb-1">
+                                    <div class="form-group">
+                                                <textarea class=" form-control" id="comments" name="comments" placeholder="Comments" ></textarea>
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <button type="submit" class="btn btn-a">Send Message</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    </div>
+</section>
+
+<!--/ Property Single End /-->
+{% endblock%}
